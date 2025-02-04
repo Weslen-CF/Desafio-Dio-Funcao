@@ -1,54 +1,58 @@
-let nome = "Tracer"
-let xpinicial = 1
-let quantidadeXp = 0
-let nivel = " "
+let nome = "Zelda"
+let saldoVitorias =  1
+let saldoDerrotas = 0
 
 for (let contador = 0; contador < 10; contador ++ ){
-   
-    quantidadeXp = quantidadeXp + 1000 + xpinicial
-   
+    saldoVitorias = saldoVitorias - saldoDerrotas
+    saldoVitorias = saldoVitorias + 10 
   }
-
-
-if (quantidadeXp == 1 || quantidadeXp == 999){
-    nivel = "Ferro"
-    console.log("Se XP for menor do que 1.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
-
+ 
+if ( saldoVitorias == 1 || saldoVitorias == 10){
+    ferro("Ferro")
 }
-else if(quantidadeXp == 1001 || quantidadeXp == 2000) {
-    nivel = "Bronze"
-    console.log("Se XP for entre 1.001 e 2.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
-
+else if( saldoVitorias == 11 || saldoVitorias == 20) {
+    bronze("Bronze")
 }
-else  if(quantidadeXp == 2001 || quantidadeXp == 5000) {
-    nivel = "Prata"
-    console.log("Se XP for entre 2.001 e 5.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
+else  if( saldoVitorias == 21 || saldoVitorias == 50) {
+    prata("Prata")
 }
-else  if(quantidadeXp == 5000 || quantidadeXp == 7000) {
-    nivel = "Ouro"
-    console.log("Se XP for entre 5.001 e 7.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
+else  if(saldoVitorias == 51 || saldoVitorias == 80) {
+    ouro("Ouro")
 }
-else  if(quantidadeXp == 7001 || quantidadeXp == 8000) {
-    nivel = "Platina"
-    console.log("Se XP for entre 7.001 e 8.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
+else  if( saldoVitorias == 81 || saldoVitorias == 90) {
+    diamante("Diamante")
 }
-else  if(quantidadeXp == 8001 || quantidadeXp == 9000) {
-    nivel = "Ascendente"
-    console.log("Se XP for entre 8.001 e 9.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
+else  if( saldoVitorias == 91 || saldoVitorias == 100) {
+    lendario("Lendario")
 }
-else  if(quantidadeXp == 9001 || quantidadeXp == 10000) {
-    nivel = "Imortal"
-    console.log("Se XP for entre 9.001 e 10.000 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
+else  if(saldoVitorias == 101 || saldoVitorias == 110) {
+    imortal("Imortal")
 }
-else if (quantidadeXp == 10001 || quantidadeXp == 10010){
-    nivel = "Radiante"
-    console.log("Se XP for maior ou igual a 10.001 = " + nivel)
-    console.log("O Herói de nome " + nome + " " + "está no nivel "+ nivel)
-}
+  function ferro(nivel){
+    console.log("Se vitórias for menor do que 10 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function bronze(nivel){
+    console.log("Se vitórias for entre 11 e 20 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function prata (nivel){
+    console.log("Se vitórias for entre 21 e 50 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function ouro (nivel){
+    console.log("Se vitórias for entre 51 e 80 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function diamante (nivel){
+    console.log("Se vitórias for entre 81 e 90 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function lendario (nivel){
+    console.log("Se vitórias for entre 91 e 100 = " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+  }
+  function imortal (nivel){
+    console.log("Se vitórias for maior ou igual a 101 " + nivel)
+    console.log("O Herói tem de saldo " + saldoVitorias + " " + "está no nivel "+ nivel)
+} 
